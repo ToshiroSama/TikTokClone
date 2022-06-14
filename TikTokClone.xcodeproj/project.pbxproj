@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6376211C2858B9D300AA9644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6376211B2858B9D300AA9644 /* GoogleService-Info.plist */; };
 		63E6A28528589E0E00F4A0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A28428589E0E00F4A0C8 /* AppDelegate.swift */; };
 		63E6A28728589E0E00F4A0C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A28628589E0E00F4A0C8 /* SceneDelegate.swift */; };
 		63E6A28928589E0E00F4A0C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A28828589E0E00F4A0C8 /* HomeViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1215D1F40E4B0D14710E5EE4 /* Pods-TikTokClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokClone.debug.xcconfig"; path = "Target Support Files/Pods-TikTokClone/Pods-TikTokClone.debug.xcconfig"; sourceTree = "<group>"; };
 		60CFC70507D9ECC8A00D4CE0 /* Pods_TikTokClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6376211B2858B9D300AA9644 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63E6A28128589E0E00F4A0C8 /* TikTokClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E6A28428589E0E00F4A0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63E6A28628589E0E00F4A0C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 				1215D1F40E4B0D14710E5EE4 /* Pods-TikTokClone.debug.xcconfig */,
 				CD270E0E38FA8D76FF7CB5EF /* Pods-TikTokClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -109,10 +110,10 @@
 		63E6A28328589E0E00F4A0C8 /* TikTokClone */ = {
 			isa = PBXGroup;
 			children = (
-				63E6A29F2858A3E900F4A0C8 /* API_Managers */,
+				63E6A29F2858A3E900F4A0C8 /* Managers */,
 				63E6A29D2858A1D900F4A0C8 /* Models */,
-				63E6A29E2858A3C700F4A0C8 /* ViewModels */,
 				63E6A29C2858A1D400F4A0C8 /* Views */,
+				63E6A29E2858A3C700F4A0C8 /* ViewModels */,
 				63E6A29B2858A1CD00F4A0C8 /* Controllers */,
 				63E6A29A2858A1C700F4A0C8 /* Extensions */,
 				63E6A2982858A1B400F4A0C8 /* App */,
@@ -133,6 +134,7 @@
 		63E6A2992858A1BF00F4A0C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6376211B2858B9D300AA9644 /* GoogleService-Info.plist */,
 				63E6A28D28589E0F00F4A0C8 /* Assets.xcassets */,
 				63E6A29228589E0F00F4A0C8 /* Info.plist */,
 			);
@@ -178,7 +180,7 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		63E6A29F2858A3E900F4A0C8 /* API_Managers */ = {
+		63E6A29F2858A3E900F4A0C8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				63E6A2B82858A85200F4A0C8 /* APICaller.swift */,
@@ -187,7 +189,7 @@
 				63E6A2BE2858A88600F4A0C8 /* AuthenticationManager.swift */,
 				63E6A2C02858A89A00F4A0C8 /* HapticsManager.swift */,
 			);
-			path = API_Managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		63E6A2A02858A68900F4A0C8 /* Core */ = {
@@ -241,6 +243,8 @@
 				63E6A27D28589E0E00F4A0C8 /* Sources */,
 				63E6A27E28589E0E00F4A0C8 /* Frameworks */,
 				63E6A27F28589E0E00F4A0C8 /* Resources */,
+				A635FF369184F54E1D21FE2B /* [CP] Embed Pods Frameworks */,
+				6376211E2858BF7900AA9644 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -291,12 +295,47 @@
 			files = (
 				63E6A29128589E0F00F4A0C8 /* LaunchScreen.storyboard in Resources */,
 				63E6A28E28589E0F00F4A0C8 /* Assets.xcassets in Resources */,
+				6376211C2858B9D300AA9644 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6376211E2858BF7900AA9644 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		A635FF369184F54E1D21FE2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokClone/Pods-TikTokClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokClone/Pods-TikTokClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokClone/Pods-TikTokClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FCF2CB0D1825A5BF188C8802 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,7 +542,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -533,7 +572,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
