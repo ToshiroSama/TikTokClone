@@ -54,14 +54,62 @@
 		63E6A28328589E0E00F4A0C8 /* TikTokClone */ = {
 			isa = PBXGroup;
 			children = (
+				63E6A29D2858A1D900F4A0C8 /* Models */,
+				63E6A29C2858A1D400F4A0C8 /* Views */,
+				63E6A29B2858A1CD00F4A0C8 /* Controllers */,
+				63E6A29A2858A1C700F4A0C8 /* Extensions */,
+				63E6A2982858A1B400F4A0C8 /* App */,
+				63E6A2992858A1BF00F4A0C8 /* Resources */,
+			);
+			path = TikTokClone;
+			sourceTree = "<group>";
+		};
+		63E6A2982858A1B400F4A0C8 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				63E6A28428589E0E00F4A0C8 /* AppDelegate.swift */,
 				63E6A28628589E0E00F4A0C8 /* SceneDelegate.swift */,
-				63E6A28828589E0E00F4A0C8 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		63E6A2992858A1BF00F4A0C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				63E6A28D28589E0F00F4A0C8 /* Assets.xcassets */,
 				63E6A28F28589E0F00F4A0C8 /* LaunchScreen.storyboard */,
 				63E6A29228589E0F00F4A0C8 /* Info.plist */,
 			);
-			path = TikTokClone;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63E6A29A2858A1C700F4A0C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63E6A29B2858A1CD00F4A0C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63E6A28828589E0E00F4A0C8 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		63E6A29C2858A1D400F4A0C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63E6A29D2858A1D900F4A0C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WUJ5ZM42NZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TikTokClone/Info.plist;
+				INFOPLIST_FILE = TikTokClone/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -308,7 +356,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WUJ5ZM42NZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TikTokClone/Info.plist;
+				INFOPLIST_FILE = TikTokClone/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
