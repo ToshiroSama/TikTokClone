@@ -27,6 +27,8 @@
 		63E6A2BD2858A87400F4A0C8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2BC2858A87400F4A0C8 /* DatabaseManager.swift */; };
 		63E6A2BF2858A88600F4A0C8 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2BE2858A88600F4A0C8 /* AuthenticationManager.swift */; };
 		63E6A2C12858A89A00F4A0C8 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2C02858A89A00F4A0C8 /* HapticsManager.swift */; };
+		63ECE3C1285A03EB00441DD3 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECE3C0285A03EB00441DD3 /* UiView.swift */; };
+		63ECE3C3285A0B6000441DD3 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECE3C2285A0B6000441DD3 /* PostModel.swift */; };
 		8CFFBCC2A5CAF459D6DC4A0B /* Pods_TikTokClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CFC70507D9ECC8A00D4CE0 /* Pods_TikTokClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		63E6A2BC2858A87400F4A0C8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		63E6A2BE2858A88600F4A0C8 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		63E6A2C02858A89A00F4A0C8 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		63ECE3C0285A03EB00441DD3 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
+		63ECE3C2285A0B6000441DD3 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		CD270E0E38FA8D76FF7CB5EF /* Pods-TikTokClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokClone.release.xcconfig"; path = "Target Support Files/Pods-TikTokClone/Pods-TikTokClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +146,7 @@
 		63E6A29A2858A1C700F4A0C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				63ECE3C0285A03EB00441DD3 /* UiView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 		63E6A29D2858A1D900F4A0C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63ECE3C2285A0B6000441DD3 /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 			files = (
 				63E6A2C12858A89A00F4A0C8 /* HapticsManager.swift in Sources */,
 				63E6A2BD2858A87400F4A0C8 /* DatabaseManager.swift in Sources */,
+				63ECE3C1285A03EB00441DD3 /* UiView.swift in Sources */,
 				63E6A2A32858A6BC00F4A0C8 /* ExploreViewController.swift in Sources */,
 				63E6A2AB2858A70A00F4A0C8 /* UserListViewController.swift in Sources */,
 				63E6A2B12858A75200F4A0C8 /* SettingsViewController.swift in Sources */,
@@ -375,6 +382,7 @@
 				63E6A2BF2858A88600F4A0C8 /* AuthenticationManager.swift in Sources */,
 				63E6A2A72858A6E800F4A0C8 /* NotificationsViewController.swift in Sources */,
 				63E6A2AD2858A72600F4A0C8 /* SignInViewController.swift in Sources */,
+				63ECE3C3285A0B6000441DD3 /* PostModel.swift in Sources */,
 				63E6A2A92858A6F000F4A0C8 /* ProfileViewController.swift in Sources */,
 				63E6A2BB2858A86200F4A0C8 /* StorageManager.swift in Sources */,
 				63E6A28528589E0E00F4A0C8 /* AppDelegate.swift in Sources */,
