@@ -1,6 +1,6 @@
 # TikTok Clone App in Swift
 
-This is the source code repository for the tiktok clone app the i built in swift
+This is the source code repository for the tiktok clone app which i built in swift
 
 ## Features
 - Feed
