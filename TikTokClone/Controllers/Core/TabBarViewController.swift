@@ -15,7 +15,7 @@ class TabBarViewController: UITabBarController {
     }
     
     private func setupControllers() {
-        // Declaring controllers
+        // Declaring variables to be assigned by controllers
         let home = HomeViewController()
         let explore = ExploreViewController()
         let camera = CameraViewController()
