@@ -195,12 +195,12 @@
 		63E6A2A02858A68900F4A0C8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				63E6A2B22858A79500F4A0C8 /* TabBarViewController.swift */,
 				63E6A28828589E0E00F4A0C8 /* HomeViewController.swift */,
 				63E6A2A22858A6BC00F4A0C8 /* ExploreViewController.swift */,
 				63E6A2A42858A6D900F4A0C8 /* CameraViewController.swift */,
 				63E6A2A62858A6E800F4A0C8 /* NotificationsViewController.swift */,
 				63E6A2A82858A6F000F4A0C8 /* ProfileViewController.swift */,
-				63E6A2B22858A79500F4A0C8 /* TabBarViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
