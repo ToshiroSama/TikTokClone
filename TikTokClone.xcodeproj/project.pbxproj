@@ -23,7 +23,6 @@
 		63E6A2B12858A75200F4A0C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2B02858A75200F4A0C8 /* SettingsViewController.swift */; };
 		63E6A2B32858A79500F4A0C8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2B22858A79500F4A0C8 /* TabBarViewController.swift */; };
 		63E6A2B52858A7F500F4A0C8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2B42858A7F500F4A0C8 /* PostViewController.swift */; };
-		63E6A2B92858A85200F4A0C8 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2B82858A85200F4A0C8 /* APICaller.swift */; };
 		63E6A2BB2858A86200F4A0C8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2BA2858A86200F4A0C8 /* StorageManager.swift */; };
 		63E6A2BD2858A87400F4A0C8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2BC2858A87400F4A0C8 /* DatabaseManager.swift */; };
 		63E6A2BF2858A88600F4A0C8 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6A2BE2858A88600F4A0C8 /* AuthenticationManager.swift */; };
@@ -52,7 +51,6 @@
 		63E6A2B02858A75200F4A0C8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		63E6A2B22858A79500F4A0C8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		63E6A2B42858A7F500F4A0C8 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		63E6A2B82858A85200F4A0C8 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		63E6A2BA2858A86200F4A0C8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		63E6A2BC2858A87400F4A0C8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		63E6A2BE2858A88600F4A0C8 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		63E6A29F2858A3E900F4A0C8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				63E6A2B82858A85200F4A0C8 /* APICaller.swift */,
 				63E6A2BA2858A86200F4A0C8 /* StorageManager.swift */,
 				63E6A2BC2858A87400F4A0C8 /* DatabaseManager.swift */,
 				63E6A2BE2858A88600F4A0C8 /* AuthenticationManager.swift */,
@@ -370,7 +367,6 @@
 				63E6A2A32858A6BC00F4A0C8 /* ExploreViewController.swift in Sources */,
 				63E6A2AB2858A70A00F4A0C8 /* UserListViewController.swift in Sources */,
 				63E6A2B12858A75200F4A0C8 /* SettingsViewController.swift in Sources */,
-				63E6A2B92858A85200F4A0C8 /* APICaller.swift in Sources */,
 				63E6A2B52858A7F500F4A0C8 /* PostViewController.swift in Sources */,
 				63E6A2A52858A6D900F4A0C8 /* CameraViewController.swift in Sources */,
 				63E6A2B32858A79500F4A0C8 /* TabBarViewController.swift in Sources */,
