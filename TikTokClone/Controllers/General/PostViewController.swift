@@ -6,9 +6,14 @@
 //
 
 import UIKit
-import FirebaseCrashlytics
+
+protocol PostViewControllerDelegate: AnyObject {
+    func postViewController(_ vc: PostViewController, didTapCommentButtonFor post: PostModel)
+}
 
 class PostViewController: UIViewController {
+    
+    weak var delegate: PostViewControllerDelegate?
     
     var model: PostModel
     
@@ -17,7 +22,6 @@ class PostViewController: UIViewController {
         button.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -26,7 +30,6 @@ class PostViewController: UIViewController {
         button.setBackgroundImage(UIImage(systemName: "text.bubble.fill"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -35,7 +38,6 @@ class PostViewController: UIViewController {
         button.setBackgroundImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -46,7 +48,6 @@ class PostViewController: UIViewController {
         label.text = "Check out this video! #fyp #foryou #foryoupage"
         label.textColor = .white
         label.font = .systemFont(ofSize: 24)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -84,7 +85,6 @@ class PostViewController: UIViewController {
                 width: size,
                 height: size)
         }
-        
         captionLabel.sizeToFit()
         let labelSize = captionLabel.sizeThatFits(CGSize(
             width: view.width - size - 12,
@@ -112,7 +112,7 @@ class PostViewController: UIViewController {
     }
     
     @objc private func didTapComment() {
-        
+        delegate?.postViewController(self, didTapCommentButtonFor: model)
     }
     
     @objc private func didTapShare() {
