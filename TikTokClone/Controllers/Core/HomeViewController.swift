@@ -128,6 +128,7 @@ class HomeViewController: UIViewController {
 
 // MARK: - Extensions
 
+// UIPageViewControllerDataSource Extension
 extension HomeViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let fromPost = (viewController as? PostViewController)?.model else {
@@ -182,6 +183,7 @@ extension HomeViewController: UIPageViewControllerDataSource {
     }
 }
 
+// UIScrollViewDelegate Extension
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x == 0 || scrollView.contentOffset.x <= (view.width / 2){
