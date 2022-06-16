@@ -23,7 +23,6 @@ class TabBarViewController: UITabBarController {
         let profile = ProfileViewController()
         
         // Assign titles to them
-        home.title = "Home"
         explore.title = "Explore"
         notifications.title = "Notifications"
         profile.title = "Profile"
@@ -33,6 +32,10 @@ class TabBarViewController: UITabBarController {
         let nav2 = UINavigationController(rootViewController: explore)
         let nav3 = UINavigationController(rootViewController: notifications)
         let nav4 = UINavigationController(rootViewController: profile)
+        
+        nav1.navigationBar.backgroundColor = .clear
+        nav1.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        nav1.navigationBar.shadowImage = UIImage()
         
         /*
          Customization items of tab bar, adding images for our icons of navigation controllers
