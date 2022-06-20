@@ -96,7 +96,8 @@ extension HomeViewController: PostViewControllerDelegate {
             x: 0,
             y: view.height,
             width: view.width,
-            height: view.height * 0.76)
+            height: view.height * 0.76
+        )
         vc.view.frame = frame
         UIView.animate(withDuration: 0.2) {
             vc.view.frame = CGRect(x: 0, y: self.view.height - frame.height, width: frame.width, height: frame.height)

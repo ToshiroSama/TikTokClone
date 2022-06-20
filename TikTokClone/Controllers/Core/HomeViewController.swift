@@ -95,10 +95,12 @@ class HomeViewController: UIViewController {
         followingPageViewController.dataSource = self
         
         horizontalScrollView.addSubview(followingPageViewController.view)
-        followingPageViewController.view.frame = CGRect(x: 0,
-                                             y: 0,
-                                             width: horizontalScrollView.width,
-                                             height: horizontalScrollView.height)
+        followingPageViewController.view.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: horizontalScrollView.width,
+            height: horizontalScrollView.height
+        )
         addChild(followingPageViewController)
         followingPageViewController.didMove(toParent: self)
     }
@@ -118,10 +120,12 @@ class HomeViewController: UIViewController {
         forYouPageViewController.dataSource = self
         
         horizontalScrollView.addSubview(forYouPageViewController.view)
-        forYouPageViewController.view.frame = CGRect(x: view.width,
-                                             y: 0,
-                                             width: horizontalScrollView.width,
-                                             height: horizontalScrollView.height)
+        forYouPageViewController.view.frame = CGRect(
+            x: view.width,
+            y: 0,
+            width: horizontalScrollView.width,
+            height: horizontalScrollView.height
+        )
         addChild(forYouPageViewController)
         forYouPageViewController.didMove(toParent: self)
     }
