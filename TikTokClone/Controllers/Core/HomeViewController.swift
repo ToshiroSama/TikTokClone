@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
         scrollView.bounces = false
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController {
        control.setTitleTextAttributes(titleTextAttributesWhite, for: .normal)
        let titletextAttriburesBlack = [NSAttributedString.Key.foregroundColor: UIColor.black]
        control.setTitleTextAttributes(titletextAttriburesBlack, for: .selected)
+       control.translatesAutoresizingMaskIntoConstraints = false
        return control
     }()
     

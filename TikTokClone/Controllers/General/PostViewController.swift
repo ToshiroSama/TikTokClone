@@ -5,6 +5,7 @@
 //  Created by Alisher Djuraev on 14/06/22.
 //
 
+import AVFoundation
 import UIKit
 
 protocol PostViewControllerDelegate: AnyObject {
@@ -23,6 +24,7 @@ class PostViewController: UIViewController {
         button.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -31,6 +33,7 @@ class PostViewController: UIViewController {
         button.setBackgroundImage(UIImage(systemName: "text.bubble.fill"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -39,6 +42,7 @@ class PostViewController: UIViewController {
         button.setBackgroundImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -48,6 +52,7 @@ class PostViewController: UIViewController {
         button.tintColor = .white
         button.layer.masksToBounds = true
         button.imageView?.contentMode = .scaleAspectFill
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -58,8 +63,11 @@ class PostViewController: UIViewController {
         label.text = "Check out this video! #fyp #foryou #foryoupage"
         label.textColor = .white
         label.font = .systemFont(ofSize: 24)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    var player: AVPlayer?
     
     // MARK: - Init
     
@@ -74,6 +82,7 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureVideo()
         let colors: [UIColor] = [
             .red, .green, .black, .orange, .blue, .systemPink
         ]
@@ -115,6 +124,20 @@ class PostViewController: UIViewController {
             height: size
         )
         profileButton.layer.cornerRadius = size / 2
+    }
+    
+    private func configureVideo() {
+        guard let path = Bundle.main.path(forResource: "video", ofType: "mp4") else {
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+        player = AVPlayer(url: url)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(playerLayer)
+        player?.volume = 0
+        player?.play()
     }
     
     @objc private func didTapProfileButton() {

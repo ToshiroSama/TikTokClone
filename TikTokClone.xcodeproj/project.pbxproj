@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631A641A286075080002127C /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 631A6419286075080002127C /* video.mp4 */; };
 		63641A5F2860465F0010C3DE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63641A5E2860465F0010C3DE /* CommentTableViewCell.swift */; };
 		6376211C2858B9D300AA9644 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6376211B2858B9D300AA9644 /* GoogleService-Info.plist */; };
 		63CAF476285B2E1700C08B3D /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAF475285B2E1700C08B3D /* CommentsViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1215D1F40E4B0D14710E5EE4 /* Pods-TikTokClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokClone.debug.xcconfig"; path = "Target Support Files/Pods-TikTokClone/Pods-TikTokClone.debug.xcconfig"; sourceTree = "<group>"; };
 		60CFC70507D9ECC8A00D4CE0 /* Pods_TikTokClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		631A6419286075080002127C /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		63641A5E2860465F0010C3DE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		6376211B2858B9D300AA9644 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63CAF475285B2E1700C08B3D /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		63641A60286053160010C3DE /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				631A6419286075080002127C /* video.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				63E6A29128589E0F00F4A0C8 /* LaunchScreen.storyboard in Resources */,
 				63E6A28E28589E0F00F4A0C8 /* Assets.xcassets in Resources */,
 				6376211C2858B9D300AA9644 /* GoogleService-Info.plist in Resources */,
+				631A641A286075080002127C /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
