@@ -101,6 +101,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		63641A60286053160010C3DE /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		63CAF477285B316E00C08B3D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +169,7 @@
 		63E6A2992858A1BF00F4A0C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				63641A60286053160010C3DE /* Videos */,
 				6376211B2858B9D300AA9644 /* GoogleService-Info.plist */,
 				63E6A28D28589E0F00F4A0C8 /* Assets.xcassets */,
 				63E6A29228589E0F00F4A0C8 /* Info.plist */,
