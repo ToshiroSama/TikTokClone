@@ -76,8 +76,6 @@ class CommentTableViewCell: UITableViewCell {
             width: dateLabel.width,
             height: dateLabel.height
         )
-        
-       
     }
     
     override func prepareForReuse() {

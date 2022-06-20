@@ -75,6 +75,8 @@ class CommentsViewController: UIViewController {
     }
 }
 
+// MARK: - EXTENSIONS
+
 extension CommentsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
@@ -97,3 +99,4 @@ extension CommentsViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
