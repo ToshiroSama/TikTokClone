@@ -25,6 +25,7 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ExploreManager.shared.delegate = self
         view.backgroundColor = .systemBackground
         configureModels()
         setUpSearchBar()
@@ -53,22 +54,12 @@ class ExploreViewController: UIViewController {
         )
         
         // Trending Posts
-        var posts = [ExploreCell]()
-        for _ in 0...40 {
-            posts.append(
-                ExploreCell.post(viewModel: ExplorePostViewModel(
-                    thumbnailImage: UIImage(named: "test"),
-                    caption: "This was a really cool post and a long caption",
-                    handler: {
-                    
-                }))
-            )
-        }
-        
         sections.append(
             ExploreSection(
                 type: .trendingPosts,
-                cells: posts
+                cells: ExploreManager.shared.getExploreTrendingPosts().compactMap({
+                    ExploreCell.post(viewModel: $0)
+                })
             )
         )
         
@@ -86,28 +77,9 @@ class ExploreViewController: UIViewController {
         sections.append(
             ExploreSection(
                 type: .trendingHashtags,
-                cells: [
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "#foryou", icon: UIImage(systemName: "house"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "#iphone13", icon: UIImage(systemName: "airplane"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "#tiktokcourse", icon: UIImage(systemName: "camera"), count: 1, handler: {
-                        
-                    })),
-                    .hashtag(viewModel: ExploreHashtagViewModel(text: "#m2Macbook", icon: UIImage(systemName: "bell"), count: 1, handler: {
-                        
-                    }))
-                ]
-            )
-        )
-        
-        // Recommended
-        sections.append(
-            ExploreSection(
-                type: .recommended,
-                cells: posts
+                cells: ExploreManager.shared.getExploreHashtags().compactMap({
+                    ExploreCell.hashtag(viewModel: $0)
+                })
             )
         )
         
@@ -115,7 +87,9 @@ class ExploreViewController: UIViewController {
         sections.append(
             ExploreSection(
                 type: .popular,
-                cells: posts
+                cells: ExploreManager.shared.getExplorePopularPosts().compactMap({
+                    ExploreCell.post(viewModel: $0)
+                })
             )
         )
         
@@ -123,7 +97,9 @@ class ExploreViewController: UIViewController {
         sections.append(
             ExploreSection(
                 type: .new,
-                cells: posts
+                cells: ExploreManager.shared.getExploreRecentPosts().compactMap({
+                    ExploreCell.post(viewModel: $0)
+                })
             )
         )
     }
@@ -199,19 +175,34 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         switch model {
         case .banner(let viewModel):
-            break
+            viewModel.handler()
         case .post(let viewModel):
-            break
+            viewModel.handler()
         case .hashtag(let viewModel):
-            break
+            viewModel.handler()
         case .user(let viewModel):
-            break
+            viewModel.handler()
         }
     }
 }
 
+// MARK: - SearchBarDelegate
+
 extension ExploreViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(didTapCancel))
+    }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.resignFirstResponder()
+    }
+    
+    @objc private func didTapCancel() {
+        navigationItem.rightBarButtonItem = nil
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+    }
 }
 
 // MARK: - Section Layouts
@@ -360,5 +351,16 @@ extension ExploreViewController {
             // Return
             return sectionLayout
         }
+    }
+}
+
+extension ExploreViewController: ExploreManagerDelegate {
+    func pushViewController(_ vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func didTapHashtag(_ hashtag: String) {
+        searchBar.text = hashtag
+        searchBar.becomeFirstResponder()
     }
 }

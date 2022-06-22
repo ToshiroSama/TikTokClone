@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct ExploreUserViewModel {
-    let profilePictureURL: UIImage?
+    let profilePicture: UIImage?
     let username: String
     let followerCount: Int
     let handler: (() -> Void)
