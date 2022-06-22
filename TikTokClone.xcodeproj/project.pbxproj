@@ -123,6 +123,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6304243328631653003564AD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				63E6A2AC2858A72600F4A0C8 /* SignInViewController.swift */,
+				63E6A2AE2858A74C00F4A0C8 /* SignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		633517D82861DB5A002BD3F5 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,9 +281,8 @@
 		63E6A2A12858A69300F4A0C8 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				6304243328631653003564AD /* Authentication */,
 				63E6A2AA2858A70A00F4A0C8 /* UserListViewController.swift */,
-				63E6A2AC2858A72600F4A0C8 /* SignInViewController.swift */,
-				63E6A2AE2858A74C00F4A0C8 /* SignUpViewController.swift */,
 				63E6A2B02858A75200F4A0C8 /* SettingsViewController.swift */,
 				63E6A2B42858A7F500F4A0C8 /* PostViewController.swift */,
 				63CAF475285B2E1700C08B3D /* CommentsViewController.swift */,
