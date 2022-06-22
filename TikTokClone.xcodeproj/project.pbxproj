@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63042436286319AB003564AD /* AuthField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63042435286319AB003564AD /* AuthField.swift */; };
+		63042438286319C9003564AD /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63042437286319C9003564AD /* AuthButton.swift */; };
 		631A641A286075080002127C /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 631A6419286075080002127C /* video.mp4 */; };
 		631A6423286083EF0002127C /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A6422286083EF0002127C /* ExploreSection.swift */; };
 		631A6425286085EB0002127C /* ExploreBannerViewModdel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A6424286085EB0002127C /* ExploreBannerViewModdel.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		1215D1F40E4B0D14710E5EE4 /* Pods-TikTokClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokClone.debug.xcconfig"; path = "Target Support Files/Pods-TikTokClone/Pods-TikTokClone.debug.xcconfig"; sourceTree = "<group>"; };
 		60CFC70507D9ECC8A00D4CE0 /* Pods_TikTokClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63042435286319AB003564AD /* AuthField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthField.swift; sourceTree = "<group>"; };
+		63042437286319C9003564AD /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		631A6419286075080002127C /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		631A6422286083EF0002127C /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
 		631A6424286085EB0002127C /* ExploreBannerViewModdel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBannerViewModdel.swift; sourceTree = "<group>"; };
@@ -130,6 +134,47 @@
 				63E6A2AE2858A74C00F4A0C8 /* SignUpViewController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		630424342863198F003564AD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				63042435286319AB003564AD /* AuthField.swift */,
+				63042437286319C9003564AD /* AuthButton.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6304243A286329E4003564AD /* User */ = {
+			isa = PBXGroup;
+			children = (
+				63E6A2AA2858A70A00F4A0C8 /* UserListViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		6304243B286329ED003564AD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				63E6A2B02858A75200F4A0C8 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6304243C286329F2003564AD /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				63E6A2B42858A7F500F4A0C8 /* PostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		6304243D286329FF003564AD /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				63CAF475285B2E1700C08B3D /* CommentsViewController.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 		633517D82861DB5A002BD3F5 /* Explore */ = {
@@ -225,7 +270,7 @@
 		63E6A29C2858A1D400F4A0C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				63E6A2B72858A82A00F4A0C8 /* Others */,
+				63E6A2B72858A82A00F4A0C8 /* UI */,
 				63E6A2B62858A81500F4A0C8 /* Storyboard */,
 			);
 			path = Views;
@@ -282,10 +327,10 @@
 			isa = PBXGroup;
 			children = (
 				6304243328631653003564AD /* Authentication */,
-				63E6A2AA2858A70A00F4A0C8 /* UserListViewController.swift */,
-				63E6A2B02858A75200F4A0C8 /* SettingsViewController.swift */,
-				63E6A2B42858A7F500F4A0C8 /* PostViewController.swift */,
-				63CAF475285B2E1700C08B3D /* CommentsViewController.swift */,
+				6304243A286329E4003564AD /* User */,
+				6304243B286329ED003564AD /* Settings */,
+				6304243C286329F2003564AD /* Post */,
+				6304243D286329FF003564AD /* Comments */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -298,13 +343,14 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		63E6A2B72858A82A00F4A0C8 /* Others */ = {
+		63E6A2B72858A82A00F4A0C8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				630424342863198F003564AD /* Auth */,
 				633517D82861DB5A002BD3F5 /* Explore */,
 				63641A5E2860465F0010C3DE /* CommentTableViewCell.swift */,
 			);
-			path = Others;
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E6A2C12858A89A00F4A0C8 /* HapticsManager.swift in Sources */,
+				63042438286319C9003564AD /* AuthButton.swift in Sources */,
 				63E6A2BD2858A87400F4A0C8 /* DatabaseManager.swift in Sources */,
 				633517DC2861DB96002BD3F5 /* ExplorePostCollectionViewCell.swift in Sources */,
 				63ECE3C1285A03EB00441DD3 /* Extension.swift in Sources */,
@@ -464,6 +511,7 @@
 				63E6A2AF2858A74C00F4A0C8 /* SignUpViewController.swift in Sources */,
 				63E6A2BF2858A88600F4A0C8 /* AuthenticationManager.swift in Sources */,
 				63E6A2A72858A6E800F4A0C8 /* NotificationsViewController.swift in Sources */,
+				63042436286319AB003564AD /* AuthField.swift in Sources */,
 				63CAF47C285B3B4000C08B3D /* PostComment.swift in Sources */,
 				63E6A2AD2858A72600F4A0C8 /* SignInViewController.swift in Sources */,
 				631A64272860861C0002127C /* ExplorePostViewModel.swift in Sources */,
