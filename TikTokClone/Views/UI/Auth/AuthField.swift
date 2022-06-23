@@ -10,11 +10,14 @@ import UIKit
 class AuthField: UITextField {
     
     enum FieldType {
+        case username
         case email
         case password
         
         var title: String {
             switch self {
+            case .username:
+                return "Username"
             case .email:
                 return "Email Address"
             case .password:
@@ -36,6 +39,7 @@ class AuthField: UITextField {
     }
     
     private func configureUI() {
+        autocapitalizationType = .none
         backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 8
         layer.masksToBounds = true
@@ -46,9 +50,11 @@ class AuthField: UITextField {
         autocorrectionType = .no
         
         if type == .password {
+            textContentType = .oneTimeCode
             isSecureTextEntry = true
         } else if type == .email {
             keyboardType = .emailAddress
+            textContentType = .emailAddress
         }
     }
 

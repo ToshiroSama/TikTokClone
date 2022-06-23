@@ -39,6 +39,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         configureButtons()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        emailField.becomeFirstResponder()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -51,7 +56,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         )
         emailField.frame = CGRect(
             x: 20,
-            y: logoImageView.bottom + 20,
+            y: logoImageView.bottom + 60,
             width: view.width - 40,
             height: 55
         )
@@ -131,13 +136,18 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             present(alert, animated: true)
                   return
         }
-        AuthManager.shared.signIn(with: email, password: password) { loggedIn in
-            if loggedIn {
-                // dismiss sign in
-                
-            } else {
-                // show error
-                
+        AuthManager.shared.signIn(with: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self?.dismiss(animated: true, completion: nil)
+                case .failure(let error):
+                    print(error)
+                    let alert = UIAlertController(title: "Sign In Failed", message: "Plese check your email and password to try again.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self?.present(alert, animated: true)
+                    self?.passwordField.text = nil
+                }
             }
         }
     }
